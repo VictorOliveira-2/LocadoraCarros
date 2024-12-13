@@ -1,0 +1,38 @@
+[
+    {
+        "cpf": "222.222.222-22",
+        "dataNasc": "08-03-2005",
+        "email": "victor@gmail.com",
+        "nome": "Victor"
+    },
+    {
+        "cpf": "444.444.444-44",
+        "dataNasc": "02-06-2000",
+        "email": "gabriel@gmail.com",
+        "nome": "Gabriel"
+    },
+    {
+        "cpf": "555.555.555-55",
+        "dataNasc": "20-12-2001",
+        "email": "meliodas@gmail.com",
+        "nome": "Meliodas"
+    },
+    {
+        "cpf": "666.666.666-66",
+        "dataNasc": "30-07-1999",
+        "email": "diego@gamil.com",
+        "nome": "Diego"
+    },
+    {
+        "cpf": "111.111.111-11",
+        "dataNasc": "02-06-1985",
+        "email": "adamastor@gmail.com",
+        "nome": "Adamastor"
+    },
+    {
+        "cpf": "888.888.888-88",
+        "dataNasc": "03-09-2004",
+        "email": "velma@gamil.com",
+        "nome": "Velma"
+    }
+]

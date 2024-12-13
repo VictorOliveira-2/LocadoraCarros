@@ -1,0 +1,109 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #f4f4f4;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+/* Ajusta o tamanho da página */
+.page-content {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  min-height: 100vw;
+}
+
+/* Estilo do título principal */
+h2 {
+  text-align: center;
+  color: #4A90E2;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+/* Estilização do carousel */
+.home-carousel .carousel-item {
+  height: 400px;
+  background-color: #eedf13;
+}
+
+.home-carousel img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-caption {
+  background-color: rgba(168, 230, 24, 0.5);
+  color: white;
+  font-size: 1.2rem;
+  text-shadow: 2px 2px 5px rgba(25, 150, 63, 0.7);
+  padding: 10px;
+}
+
+/* Estilo do parágrafo sobre a LocalizE */
+p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+p strong {
+  color: #4A90E2;
+  font-weight: bold;
+}
+
+p em {
+  color: #8a8a8a;
+}
+
+/* Estilo para a seção "Por que escolher a LocalizE?" */
+.por-que-escolher {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 40px;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.por-que-escolher div {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  width: 250px;
+  margin: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.por-que-escolher h3 {
+  color: #4A90E2;
+  margin-bottom: 15px;
+}
+
+.por-que-escolher p {
+  font-size: 1rem;
+  color: #555;
+}

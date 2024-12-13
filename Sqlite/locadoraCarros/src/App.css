@@ -1,0 +1,66 @@
+/* Variáveis e estilos base */
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+/* Ajusta o tamanho da página */
+.page-content {
+  height: 70vw;
+}
+
+/* Estilo do carrossel */
+.home-carousel {
+  width: 100%; /* Ocupa toda a largura disponível */
+  height: auto; /* Define a altura como proporção da largura */
+  max-height: 800px; /* Altura máxima para telas grandes */
+  margin: 0 auto; /* Centraliza o carrossel */
+  border-radius: 10px; /* Bordas arredondadas */
+  overflow: hidden; /* Remove conteúdo que excede os limites */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+  position: relative;
+}
+
+/* Imagens dentro do carrossel */
+.home-carousel img {
+  object-fit: cover; /* Garante que a imagem se ajuste ao tamanho sem distorção */
+  width: 100%; /* Ocupa toda a largura do container */
+  height: 100%; /* Ajusta a altura para preencher o container */
+}
+
+/* Legendas do carrossel */
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.6); /* Fundo semitransparente */
+  color: #fff; /* Texto em branco */
+  padding: 10px;
+  border-radius: 5px; /* Bordas arredondadas nas legendas */
+  text-align: center; /* Centraliza o texto */
+}
+
+.carousel-caption h3 {
+  font-size: 1.8rem; /* Tamanho do título */
+  margin-bottom: 0.5rem;
+}
+
+.carousel-caption p {
+  font-size: 1rem; /* Tamanho do texto */
+}
