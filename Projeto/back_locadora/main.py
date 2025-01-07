@@ -1,7 +1,3 @@
-from flask import Flask, jsonify
-from flask_cors import CORS
-import json
-import os
 from dbconfig import Gerenciador
 from usuario import Usuario
 from alugados import Alugados
@@ -30,10 +26,9 @@ def menu_locadora():
     print("10 - Saindo")
 
 
-
 while True:
         menu_locadora()
-        opcao = int(input("Escolha umx a opção:"))
+        opcao = int(input("Escolha uma opção: "))
 
         if opcao == 1:
             dataInicio = input("Digite a data do inicio do aluguel: ")
@@ -51,33 +46,33 @@ while True:
             alugados.apagarDadosAlugados(cpf)
 
         elif opcao == 4:
-            cpf = input("Digite o CPF:")
-            nome = input("Digite o nome:")
-            email = input("Digite o e-mail:")
-            dataNasc = input("Digite a data de nascimento: (com traços)")
+            cpf = input("Digite o CPF: ")
+            nome = input("Digite o nome: ")
+            email = input("Digite o e-mail: ")
+            dataNasc = input("Digite a data de nascimento: ")
             usuario.InserirUsuario(cpf, nome, email, dataNasc)
         
         elif opcao == 5:
             usuario.MostrarTodosUsuarios()
 
         elif opcao == 6:
-            cpf = input("Digite o CPF do usuário que deseja deletar:")
+            cpf = input("Digite o CPF do usuário que deseja deletar: ")
             usuario.DeletarUsuario(cpf)
 
         elif opcao == 7:
-            idVeiculo = int(input("Digite o Id do veículo:"))
-            marca = input("Digite a marca do veículo:") 
-            modelo = input("Digite o modelo do veículo:") 
-            placa = input("Digite a placa do veículo:") 
-            tipoCombustivel = input("Digite o tipo de combustível usado") 
-            precoVeiculo = float(input("Digite o preço do aluguel do veículo"))
+            idVeiculo = int(input("Digite o Id do veículo: "))
+            marca = input("Digite a marca do veículo: ") 
+            modelo = input("Digite o modelo do veículo: ") 
+            placa = input("Digite a placa do veículo: ") 
+            tipoCombustivel = input("Digite o tipo de combustível usado: ") 
+            precoVeiculo = float(input("Digite o preço do aluguel do veículo: "))
             veiculos.InserirVeiculos(idVeiculo, marca, modelo, placa, tipoCombustivel, precoVeiculo)
 
         elif opcao == 8:
             veiculos.MostrarVeiculos()
 
         elif opcao == 9:
-            idVeiculo = int(input("Digite o Id do veículo que deseja deletar"))
+            idVeiculo = int(input("Digite o Id do veículo que deseja deletar: "))
             veiculos.DeletarVeiculos(idVeiculo)
 
         elif opcao == 10:
@@ -91,41 +86,4 @@ app.fechar()
 
 
 
-# Rotas do Flask e leitura dos arquivos json
-server = Flask(__name__)
-CORS(server)  
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-
-@server.route('/usuarios', methods=['GET'])
-def get_usuarios():
-    file_path = os.path.join(BASE_DIR, 'usuarios.json')
-    try:
-        with open(file_path, 'r') as file:
-            data = json.load(file)
-        return jsonify(data)
-    except FileNotFoundError:
-        return jsonify({"error": "Arquivo usuarios.json não encontrado"}), 404
-
-@server.route('/carros', methods=['GET'])
-def get_carros():
-    file_path = os.path.join(BASE_DIR, 'veiculos.json')
-    try:
-        with open(file_path, 'r') as file:
-            data = json.load(file)
-        return jsonify(data)
-    except FileNotFoundError:
-        return jsonify({"error": "Arquivo veiculos.json não encontrado"}), 404
-
-@server.route('/alugados', methods=['GET'])
-def get_alugados():
-    file_path = os.path.join(BASE_DIR, 'alugados.json')
-    try:
-        with open(file_path, 'r') as file:
-            data = json.load(file)
-        return jsonify(data)
-    except FileNotFoundError:
-        return jsonify({"error": "Arquivo alugados.json não encontrado"}), 404
-
-if __name__ == '__main__':
-    server.run(debug=True)

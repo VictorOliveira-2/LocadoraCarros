@@ -1,0 +1,18 @@
+[
+    {
+        "idVeiculo": 2,
+        "marca": "ford",
+        "modelo": "mustang",
+        "placa": "99999",
+        "precoVeiculo": 100,
+        "tipoCombustivel": "gasolina"
+    },
+    {
+        "idVeiculo": 9,
+        "marca": "volks",
+        "modelo": "gol",
+        "placa": "99999",
+        "precoVeiculo": 100,
+        "tipoCombustivel": "gasolina"
+    }
+]

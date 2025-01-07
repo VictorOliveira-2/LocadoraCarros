@@ -1,0 +1,16 @@
+[
+    {
+        "cpf": "999.999.999-99",
+        "dataFim": "11-10-2024",
+        "dataInicio": "10-10-2024",
+        "idVeiculo": 9,
+        "precoFinal": 100
+    },
+    {
+        "cpf": "222.222.222-22",
+        "dataFim": "01-02-2025",
+        "dataInicio": "01-01-2025",
+        "idVeiculo": 2,
+        "precoFinal": 1000
+    }
+]

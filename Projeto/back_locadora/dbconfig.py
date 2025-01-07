@@ -7,14 +7,9 @@ class Gerenciador:
         self.conexao = sqlite3.connect("locadoraVeiculos.db")
         self.cursor = self.conexao.cursor()
     
-    # def ApagarTabelas(self):
-    #     self.cursor.execute("drop table usuarios;")
-    #     self.cursor.execute("drop table veiculos;")
-    #     self.cursor.execute("drop table alugados;")
 
     def criarTabelas(self):
-        # self.ApagarTabelas()
-        # Usuários:
+       
         self.cursor.execute('''
         create table if not exists usuarios(
         cpf text primary key, 
