@@ -9,6 +9,7 @@ usuario = Usuario(app)
 alugados = Alugados(app)
 veiculos = Veiculos(app)
 
+# função do menu
 def menu_locadora():
     print("Menu de opções")
     print("1 - Inserir dados do aluguel")
